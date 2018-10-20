@@ -7,6 +7,23 @@ import java.sql.Statement;
 
 //EUC-KR
 
+/*
+ * DB 
+mysql> 
+mysql> desc project;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| name    | varchar(10) | YES  |     | NULL    |       |
+| phone   | varchar(20) | NO   | PRI | NULL    |       |
+| regin   | varchar(10) | YES  |     | NULL    |       |
+| address | varchar(50) | YES  |     | NULL    |       |
+| product | varchar(30) | YES  |     | NULL    |       |
+| amount  | int(100)    | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+
+*/
+
 public class AppDB {
 
 	static Connection conn = null;

@@ -82,6 +82,8 @@ try {
 		dialog.setAlwaysOnTop(true);
 		
 		
+		
+		
 	} catch (Exception e2) {
 		// TODO: handle exception
 	}

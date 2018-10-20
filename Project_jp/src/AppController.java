@@ -41,7 +41,7 @@ public class AppController implements Initializable  {
 	@FXML private Button btn_search;
 	@FXML private Button btn_update;
 	
-	//Serch 
+	//search
 	@FXML private TextField text_name;
 	@FXML private TextField text_phone;
 	@FXML private ChoiceBox<Object> choice_region; 

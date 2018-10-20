@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="432.0" prefWidth="1130.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AppController">
+   <top>
+      <VBox prefHeight="108.0" prefWidth="1130.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="物流管理">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <HBox alignment="TOP_RIGHT" prefHeight="85.0" prefWidth="1130.0">
+               <children>
+                  <Label text="名前" />
+                  <TextField fx:id="text_name" prefHeight="32.0" prefWidth="69.0" xmlns="default namespace">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label text="電話番号">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="text_phone" prefHeight="32.0" prefWidth="80.0" xmlns="default namespace">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label text="地域">
+                     <HBox.margin>	
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ChoiceBox fx:id="choice_region" prefHeight="32.0" prefWidth="78.0" xmlns="default namespace">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </ChoiceBox>
+                  <Label text="製品">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ChoiceBox fx:id="choice_product" prefHeight="32.0" prefWidth="84.0" xmlns="default namespace">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </ChoiceBox>
+                  <Button fx:id="btn_search" mnemonicParsing="false" prefHeight="32.0" prefWidth="80.0" text="検索">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets right="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <TableView fx:id="table_view" prefHeight="166.0" prefWidth="1093.0" BorderPane.alignment="CENTER">
+        <columns>
+            <TableColumn fx:id="tv_name" prefWidth="104.0" resizable="false" text="名前" />
+          <TableColumn fx:id="tv_phone" minWidth="0.0" prefWidth="146.0" resizable="false" text="電話番号" />
+          <TableColumn fx:id="tv_regoin" minWidth="0.0" prefWidth="152.0" resizable="false" text="地域" />
+            <TableColumn fx:id="tv_address" minWidth="0.0" prefWidth="448.0" resizable="false" text="住所" />
+            <TableColumn fx:id="tv_product" minWidth="0.0" prefWidth="164.0" resizable="false" text="製品" />
+            <TableColumn fx:id="tv_amount" prefWidth="78.0" text="数" />
+        </columns>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+   <bottom>
+      <HBox alignment="TOP_RIGHT" prefHeight="49.0" prefWidth="1130.0" BorderPane.alignment="CENTER_LEFT">
+         <children>
+            <HBox prefHeight="49.0" prefWidth="543.0">
+               <children>
+                  <Label text="総合">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="20.0" prefWidth="69.0" text="제품A: ">
+                     <HBox.margin>
+                        <Insets top="12.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="productA" prefHeight="30.0" prefWidth="59.0">
+                     <HBox.margin>
+                        <Insets top="6.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label prefHeight="20.0" prefWidth="77.0" text="제품B: ">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets top="12.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="productB" prefHeight="30.0" prefWidth="55.0">
+                     <HBox.margin>
+                        <Insets top="6.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label text="제품C: ">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets top="12.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="productC" prefHeight="30.0" prefWidth="52.0">
+                     <HBox.margin>
+                        <Insets top="6.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets right="240.0" />
+               </HBox.margin>
+            </HBox>
+            <Button fx:id="btn_add" mnemonicParsing="false" prefWidth="100.0" text="追加">
+               <HBox.margin>
+                  <Insets right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btn_update" mnemonicParsing="false" prefWidth="100.0" text="修正">
+               <HBox.margin>
+                  <Insets right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btn_delete" mnemonicParsing="false" prefWidth="100.0" text="削除">
+               <HBox.margin>
+                  <Insets right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+   <left>
+      <Pane prefHeight="264.0" prefWidth="21.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Pane prefHeight="264.0" prefWidth="16.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>
